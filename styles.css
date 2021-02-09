@@ -1,0 +1,50 @@
+body {
+    background-color: honeydew;
+    font-family: 'Roboto', sans-serif;
+    text-align:center
+}
+
+#container {
+    background-color:darkcyan;
+    width: 200px;
+    height: 285px;
+    display: inline-block;
+}
+
+.line {
+    height: 48px;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.smallbutton {
+    height: 40px;
+    width: 40px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 4px;
+    background-color:rgb(133, 158, 158);
+}
+
+#display {
+    height: 40px;
+    width: 195px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 4px;
+    background-color: whitesmoke;
+}
+
+#equals {
+    height: 40px;
+    width: 92px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+    border-radius: 4px;
+    background-color:rgb(133, 158, 158);
+}
+
