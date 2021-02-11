@@ -5,7 +5,7 @@ body {
 }
 
 #container {
-    background-color: rgba(240, 255, 240, 0.842);
+    background-color: rgba(240, 255, 240, 0.63);
     width: 200px;
     height: 285px;
     display: inline-block;
@@ -38,6 +38,21 @@ body {
     border-radius: 4px;
     background-color:rgb(167, 187, 187);
     font-size: 22px;
+}
+
+.displaybutton:active {
+    border-color: rgb(70, 102, 128);
+    box-shadow: 0 0 3px 3px rgba(0,0,0,0.4);
+}
+
+.operatorbutton:active {
+    border-color: rgb(70, 102, 128);
+    box-shadow: 0 0 3px 3px rgba(0,0,0,0.4);
+}
+
+#equals:active {
+    border-color: rgb(70, 102, 128);
+    box-shadow: 0 0 3px 3px rgba(0,0,0,0.4);
 }
 
 #display {
