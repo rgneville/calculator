@@ -31,8 +31,8 @@ function divide (num1, num2) {
     return num3
 }
 
-//operates based on 
-function operate (num1, num2, operator) {   
+//operates based on operator button clicked
+function operate (num1, num2, operator) {
     let number1 = +num1;
     let number2 = +num2;
     let output = 0;
@@ -56,7 +56,7 @@ function operate (num1, num2, operator) {
         let result = divide(number1, number2);
         output = result;
     }
-    operationCounter = 0;
+    //operationCounter = 0;
     output = +output.toFixed(6);
     return output
 }
@@ -75,14 +75,14 @@ for (i = 0; i < operatorButtons.length; i++) {
     const activeButton = operatorButtons[i];
     activeButton.addEventListener('click', () => {
         operator = activeButton.id;
-        if (operationCounter === 0) {
+        if (operationCounter == 0) {
             memory = activeDisplay;
-            operationCounter ++;
+            operationCounter++;
         }
-        else {
+        else if (operationCounter >= 1) {
             memory = operate(memory, activeDisplay, operator);
             display.innerHTML = memory;
-            operationCounter ++;
+            operationCounter++;
         }
         activeDisplay = "";
     });
@@ -93,6 +93,7 @@ ACButton.addEventListener('click', () => {
     memory = "";
     activeDisplay = "";
     operator = "";
+    operationCounter = 0;
     display.innerHTML = "0";
     console.log("All cleared.");
 });
@@ -117,12 +118,7 @@ plusMinusButton.addEventListener('click', () => {
 
 //evaluates screen and memory
 equalsButton.addEventListener('click', () => {
-    console.log(memory);
-    console.log(activeDisplay);
-    console.log(operator);
-    console.log(operationCounter);
     let finalOutput = operate(memory, activeDisplay, operator);
     display.innerHTML = finalOutput;
+    operationCounter = 0;
 });
-
-//divide functionality is buggy, investigate further...
